@@ -11,10 +11,13 @@
 <body>
     <div class="main-content">
         {{>header}}
-        <img class="portrait" src="/img/carteira.jpg">
-        <p>This is me, {{ name }}</p>
+        <p>This site was created by {{ name }}. It uses data from mapbox.com and darksy.net</p>
+        <figure>
+            <img class="portrait" alt="Pedro Santos photo" src="/img/carteira.jpg">
+            <figcaption>This is me, Pedro Santos</figcaption>
+        </figure>
     </div>
-    
+
     {{>footer}}
 </body>
 
