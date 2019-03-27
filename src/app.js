@@ -36,7 +36,7 @@ app.get('', (req, res) => {
 //about
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About me',
+        title: 'About',
         name
     });
 });
@@ -62,32 +62,20 @@ app.get('/weather', (req, res) => {
             return res.send({ error });
         }
 
-        forecast(latitude, longitude, (error, weatherData) => {
+        forecast(latitude, longitude, (error, weatherData, icon, time) => {
             if (error) {
                 return res.send({ error });
             }
             res.send({
                 forecast: weatherData,
                 location,
+                icon,
+                time,
                 address: req.query.address
             });
         });
     });
 
-});
-
-app.get('/products', (req, res) => {
-
-    if (!req.query.search) {
-        return res.send({
-            error: 'You must provide a search term'
-        });
-    }
-
-    console.log(req.query);
-    res.send({
-        products: []
-    });
 });
 
 // help 404

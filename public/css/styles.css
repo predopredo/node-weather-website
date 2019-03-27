@@ -4,31 +4,14 @@ body {
     max-width: 650px;
     margin: 0 auto;
     padding: 0 16px;
-
     display: flex;
     flex-direction: column;
     min-height: 100vh
 }
 
-.main-content {
-    flex-grow: 1;
-}
-
-footer {
-    color: #888888;
-    border-top: 1px solid #eeeeee;
-    margin-top: 16px;
-    padding: 16px 0;
-}
-
 header {
     margin-top: 16px;
-    margin-bottom: 48px;
-}
-
-h1 {
-    font-size: 64px;
-    margin-bottom: 16px;
+    margin-bottom: 30px;
 }
 
 header a {
@@ -37,8 +20,23 @@ header a {
     text-decoration: none;
 }
 
-.portrait {
-    width: 250px;
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+    color: #333333d8;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column;
+}
+
+form {
+    margin-top: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 input {
@@ -52,4 +50,72 @@ button {
     background: #888888;
     color: white;
     padding: 8px;
+}
+
+.display {
+    flex-grow: .5;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon {
+    height: 80px;
+}
+
+.requestWrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.request p {
+    text-align: left;
+}
+
+#loading {
+    height: 80px;
+}
+
+#message-1 {
+    font-weight: bold;
+    color: #888888;
+    font-size: 20px;
+    margin: 0;
+}
+
+#time {
+    font-size: 10px;
+    position: relative;
+    bottom: 5px;
+}
+
+#message-2 {
+    font-size: 12px;
+}
+
+.portraitWrapper {
+    flex-grow: .5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portrait {
+    width: 200px;
+}
+
+figcaption {
+    margin-top: 10px;
+    text-align: center;
+}
+
+footer {
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px 0;
 }
