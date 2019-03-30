@@ -25,9 +25,9 @@ const forecast = (lat, long, callback) => {
         } else if (body.error) {
             callback(`Error ${body.code}: ${body.error}`, undefined)
         } else {
-            const { time, icon, temperature, precipProbability: rainChance } = body.currently
+            const { icon, temperature, precipProbability: rainChance } = body.currently
             const summary = body.daily.data[0].summary;
-            callback(undefined, `${summary} It is currently ${Math.floor(temperature)} degrees out. There is a ${rainChance}% chance of rain.`, icon, getHours(time))
+            callback(undefined, `${summary} It is currently ${Math.floor(temperature)} degrees out. There is a ${rainChance}% chance of rain.`, icon)
         }
     })
 }
